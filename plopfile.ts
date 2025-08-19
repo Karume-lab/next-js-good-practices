@@ -8,7 +8,7 @@ const Plopper = (plop: NodePlopAPI) => {
         type: "list",
         name: "type",
         message: "Which type of component?",
-        choices: ["containers", "layouts", "ui"],
+        choices: ["containers", "layouts", "presenters"],
       },
       {
         type: "input",
@@ -22,6 +22,19 @@ const Plopper = (plop: NodePlopAPI) => {
         path: "src/components/{{type}}/{{pascalCase name}}.tsx",
         templateFile:
           "scaffold-templates/components/{{type}}/{{pascalCase type}}.tsx.hbs",
+      },
+      {
+        type: "append",
+        path: "src/components/index.ts",
+        pattern: "/* PLOP_INJECT_IMPORT */",
+        template:
+          "import {{pascalCase name}} from '@/components/{{type}}/{{pascalCase name}}';",
+      },
+      {
+        type: "append",
+        path: "src/components/index.ts",
+        pattern: "/* PLOP_INJECT_EXPORT */",
+        template: "  {{pascalCase name}},",
       },
     ],
   });
