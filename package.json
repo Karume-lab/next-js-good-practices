@@ -2,12 +2,13 @@
   "name": "learning-next-js",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "plop": "plop"
+    "scaffold": "plop"
   },
   "dependencies": {
     "react": "19.1.0",
