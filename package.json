@@ -7,10 +7,11 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "biome lint --write",
-		"format": "biome format --write",
-		"check": "biome check",
-		"scaffold": "plop"
+		"lint": "biome lint",
+		"format": "biome format",
+		"check": "biome check --write",
+		"scaffold": "plop",
+		"lefthook": "lefthook"
 	},
 	"dependencies": {
 		"react": "19.1.0",
@@ -22,6 +23,7 @@
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"lefthook": "^1.12.3",
 		"plop": "^4.0.1",
 		"typescript": "^5"
 	}
