@@ -11,7 +11,8 @@
     "format": "biome format",
     "check": "biome check --write",
     "scaffold": "plop",
-    "lefthook": "lefthook"
+    "lefthook": "lefthook",
+    "postinstall": "lefthook install"
   },
   "dependencies": {
     "react": "19.1.0",

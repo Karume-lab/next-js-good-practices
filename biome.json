@@ -6,7 +6,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": true
+    "ignoreUnknown": true,
+    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
   },
   "formatter": {
     "enabled": true,
@@ -17,16 +18,14 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "a11y": "on"
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double"
+      "suspicious": "warn"
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
     }
   },
   "assist": {
-    "enabled": true,
     "actions": {
       "source": {
         "organizeImports": "on"
